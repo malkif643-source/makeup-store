@@ -3,7 +3,7 @@ import {
     deleteProduct,
     getAllProducts,
     getProductById,
-    AddProduct,
+    addProduct,
     updateProduct
 } from "../conrollers/products.js";
 import { validateBody } from "../middlewares/validatejoi.js";
@@ -13,7 +13,7 @@ const router = Router();
 
 router.get("/", getAllProducts);
 router.get("/:id", getProductById);
-router.post("/", validateBody(productSchema), AddProduct);
+router.post("/", validateBody(productSchema), addProduct);
 router.put("/:id", updateProduct);
 router.delete("/:id", deleteProduct);
 

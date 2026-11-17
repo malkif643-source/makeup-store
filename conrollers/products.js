@@ -1,5 +1,5 @@
 import { isValidObjectId } from "mongoose";
-import Product from "../models/products";
+import Product from "../models/products.js";
 export const getAllProducts=async(req,res,next)=>{
  try{
     const {page=1,limit=10}=req.query;
