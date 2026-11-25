@@ -21,7 +21,7 @@ export const registerSchema = Joi.object({
         city: Joi.string().required(),
         zipCode: Joi.string().allow("", null),
     }).required(),
-    role: Joi.string().valid("customer", "admin").default("customer"),
+    role: Joi.string().valid("user", "admin").default("user"),
 });
 
 // update password - עדכון סיסמה
